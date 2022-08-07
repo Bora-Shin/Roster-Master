@@ -1,4 +1,7 @@
 <template>
+<div class="container-fluid">
+
+
   <h3 class="my-5">Approving Request</h3>
   <table class="table table-striped w-75 m-auto">
     <thead>
@@ -101,6 +104,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </template>
 
 <script>

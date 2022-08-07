@@ -1,6 +1,8 @@
 <template>
+<div class="container-fluid">
 
-  <table class="table table-striped mx-auto w-50">
+
+  <table class="table table-striped mx-auto w-75">
     <thead>
       <th>Day</th>
       <th>From</th>
@@ -16,6 +18,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </template>
 
 <script>

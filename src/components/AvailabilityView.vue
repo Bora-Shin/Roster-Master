@@ -1,4 +1,7 @@
 <template>
+<div class="container-">
+
+
   <h3 class="my-5">Your Available Hours</h3>
   <AvailabilityModal />
 
@@ -6,6 +9,7 @@
     Edit Availability</router-link
   >
   <router-view></router-view>
+  </div>
 </template>
 <script>
 import AvailabilityModal from "../components/AvailabilityModal.vue";

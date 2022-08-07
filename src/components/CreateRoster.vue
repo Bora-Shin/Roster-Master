@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid mt-5">
     <!-- select week to create roster -->
-    <div class="w-50 m-auto">
+    <div class="w-50 m-auto my-2">
       <Datepicker
         v-model="date"
         weekPicker
