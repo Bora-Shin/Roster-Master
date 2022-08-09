@@ -6,9 +6,18 @@
       </router-link>
 
       <div class="d-flex justify-content-end">
-        <p class="m-auto me-4 text-white" @click="selectStoreWindow = true">
-          <span v-if="$store.state.isStoreSelected == false">select store</span>
-          <span v-if="$store.state.isStoreSelected == true"
+        <p class="m-auto me-4 text-white" >
+          <span v-if="$store.state.isRegistered == true" >
+            <img
+              src="../public/user.png"
+              alt=""
+              height="20"
+              
+            />
+            Hi, {{ $store.state.user.firstName }}!
+          </span>
+          <span v-if="$store.state.isStoreSelected == false && $store.state.isRegistered == true" @click="selectStoreWindow = true">Select Store</span>
+          <span v-if="$store.state.isStoreSelected == true && $store.state.isRegistered == true" @click="selectStoreWindow = true"
             >{{ $store.state.selectedStore.name }} ({{
               $store.state.selectedStore.address
             }})</span
@@ -42,7 +51,7 @@
               >Rosters</router-link
             >
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" v-if="$store.state.isManager == true">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -66,7 +75,7 @@
                 <router-link
                   to="/list"
                   class="dropdown-item"
-                  v-if="$store.state.isManager == true"
+                  
                   >Employees List</router-link
                 >
               </li>
@@ -137,8 +146,9 @@
               to="/login"
               v-if="$store.state.isLoggedin == false"
               class="nav-link"
-              >Log in</router-link
-            >
+
+              >Log in</router-link>
+
           </li>
         </ul>
       </div>
