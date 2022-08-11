@@ -19,7 +19,7 @@ import {
 import { createStore } from "vuex";
 import router from "./router";
 import { db } from "./firebase/db";
-import { BIconArrowCounterclockwise } from "bootstrap-vue";
+
 
 const auth = getAuth();
 
@@ -209,9 +209,9 @@ const store = createStore({
           storeID: [],
           availability: [],
         });
+        store.commit("isRegistered", true);
         console.log("employee added");
         alert("User account successfully registered");
-        store.commit("isRegistered", true);
         //direct to home page
         router.push("/");
       } catch (e) {

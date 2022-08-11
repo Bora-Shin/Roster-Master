@@ -175,6 +175,7 @@ export default {
     return {
       user: computed(() => this.$store.state.user),
       isLoggedin: computed(() => this.$store.state.isLoggedin),
+      isRegistered: computed(() =>this.$store.state.isRegistered),
       selectedStore: computed(() => this.$store.state.selectedStore),
       storeInfo: computed(() =>this.$store.state.storeInfo),
       selectStoreWindow: false,

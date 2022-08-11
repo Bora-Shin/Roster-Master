@@ -172,7 +172,6 @@ export default {
         type: this.type,
       });
 
-      this.$store.dispatch("isRegistered", true)
     },
   },
 };
